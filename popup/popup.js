@@ -1182,13 +1182,13 @@ class PhishingDetector {
 
     reportIssue() {
         chrome.tabs.create({
-            url: 'https://github.com/your-username/phis-catcher/issues/new'
+            url: 'https://github.com/Alkyones/Phisher-Extension/issues/new'
         });
     }
 
     openHelp() {
         chrome.tabs.create({
-            url: 'https://github.com/your-username/phis-catcher/wiki'
+            url: 'https://github.com/Alkyones/Phisher-Extension'
         });
     }
 }
