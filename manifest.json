@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Phisher - AI URL Protection",
-  "version": "2.1.0",
+  "version": "1.1.0",
   "description": "Advanced AI-powered phishing detection and URL threat analysis powered by neural networks",
   "permissions": [
     "activeTab",
