@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phisher - AI URL Protection</title>
+    <link rel="stylesheet" href="styles/popup.css">
+    <link rel="stylesheet" href="styles/theme.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="ai-icon">🤖</div>
+                <div class="brand-info">
+                    <h1>Phisher</h1>
+                    <span class="ai-badge">AI-Powered</span>
+                </div>
+            </div>
+            <div class="protection-status">
+                <div class="status-indicator active"></div>
+                <span class="status-text">Protected</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="ai-scan-section">
+                <div class="scan-header">
+                    <div class="title-row">
+                        <div class="scan-icon">🔍</div>
+                        <h2>AI URL Scanner</h2>
+                    </div>
+                    <p>Advanced phishing detection powered by machine learning</p>
+                </div>
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input type="url" id="urlInput" placeholder="Paste any URL for instant AI analysis..." class="ai-input">
+                        <div class="input-actions">
+                            <button id="pasteBtn" class="paste-btn" title="Paste from clipboard">
+                                <svg viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="analyzeBtn" class="ai-analyze-btn">
+                        <span class="btn-content">
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18">
+                                <path fill="currentColor" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"/>
+                            </svg>
+                            <span class="btn-text">Scan with AI</span>
+                        </span>
+                        <div class="btn-spinner" style="display: none;">
+                            <div class="ai-spinner"></div>
+                            <span class="scanning-text">Analyzing...</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="ai-analysis-section">
+                <div class="threat-intelligence-card" id="analysisCard">
+                    <div class="ai-loading" id="loadingIndicator" style="display: none;">
+                        <div class="neural-network">
+                            <div class="node"></div>
+                            <div class="node"></div>
+                            <div class="node"></div>
+                        </div>
+                        <div class="loading-text">
+                            <h3>AI Analysis in Progress</h3>
+                            <p>Neural networks processing URL patterns...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-result" id="analysisResult" style="display: none;">
+                        <div class="threat-header">
+                            <div class="threat-status" id="resultIcon"></div>
+                            <div class="threat-summary">
+                                <h3 id="resultTitle">Threat Assessment</h3>
+                                <p id="resultDescription">AI confidence analysis</p>
+                            </div>
+                            <div class="ai-confidence">
+                                <span class="confidence-label">AI Confidence</span>
+                                <span class="confidence-value" id="confidenceScore">95%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="risk-visualization">
+                            <div class="risk-meter">
+                                <div class="meter-bg">
+                                    <div class="meter-fill" id="scoreFill"></div>
+                                </div>
+                                <div class="risk-labels">
+                                    <span>Safe</span>
+                                    <span>Suspicious</span>
+                                    <span>Dangerous</span>
+                                </div>
+                            </div>
+                            <div class="risk-score-display">
+                                <span class="score-number" id="scoreText">0%</span>
+                                <span class="score-label">Threat Score</span>
+                            </div>
+                        </div>
+
+                        <div class="ai-insights" id="threatDetails">
+                            <div class="insights-header">
+                                <svg viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12,2C13.1,2 14,2.9 14,4C14,5.1 13.1,6 12,6C10.9,6 10,5.1 10,4C10,2.9 10.9,2 12,2M21,9V7L15,1H5C3.89,1 3,1.89 3,3V21A2,2 0 0,0 5,23H19A2,2 0 0,0 21,21V9M19,9H14V4H5V19H19V9Z"/>
+                                </svg>
+                                <span>AI Threat Intelligence</span>
+                            </div>
+                            <div class="insights-list" id="threatList"></div>
+                        </div>
+
+                        <div class="ai-recommendations" id="recommendations">
+                            <div class="rec-header">
+                                <svg viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,14L18.5,6.5L17.1,5.1L11,11.2L6.9,7.1L5.5,8.5L11,14Z"/>
+                                </svg>
+                                <span>Security Recommendations</span>
+                            </div>
+                            <p id="recommendationText"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intelligence-metrics">
+                <div class="metric-card scanned">
+                    <div class="metric-icon">🔍</div>
+                    <div class="metric-data">
+                        <span class="metric-number" id="totalChecks">0</span>
+                        <span class="metric-label">Scanned</span>
+                    </div>
+                </div>
+                <div class="metric-card blocked">
+                    <div class="metric-icon">🛡️</div>
+                    <div class="metric-data">
+                        <span class="metric-number" id="threatsBlocked">0</span>
+                        <span class="metric-label">Found Threats</span>
+                    </div>
+                </div>
+                <div class="metric-card safe">
+                    <div class="metric-icon">✅</div>
+                    <div class="metric-data">
+                        <span class="metric-number" id="safeUrls">0</span>
+                        <span class="metric-label">Verified Safe</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="modern-footer">
+            <div class="footer-nav">
+                <button id="historyBtn" class="nav-btn">
+                    <span class="nav-icon">📊</span>
+                    <span>History</span>
+                </button>
+                <button id="settingsBtn" class="nav-btn">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Settings</span>
+                </button>
+                <button id="reportBtn" class="nav-btn">
+                    <span class="nav-icon">📝</span>
+                    <span>Report</span>
+                </button>
+                <button id="helpBtn" class="nav-btn">
+                    <span class="nav-icon">❓</span>
+                    <span>Help</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="templateManager.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

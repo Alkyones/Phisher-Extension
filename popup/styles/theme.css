@@ -1,0 +1,175 @@
+/* Theme Management CSS */
+
+/* Dark Theme Variables (Default) */
+:root[data-theme="dark"] {
+    /* AI Theme Colors */
+    --ai-primary: #6366f1;
+    --ai-primary-dark: #4f46e5;
+    --ai-primary-light: #a5b4fc;
+    --ai-secondary: #0ea5e9;
+    --ai-accent: #06b6d4;
+    
+    /* Status Colors */
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --info-color: #3b82f6;
+    
+    /* Surfaces & Backgrounds */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --surface-glass: rgba(255, 255, 255, 0.05);
+    --surface-card: rgba(255, 255, 255, 0.08);
+    --surface-hover: rgba(255, 255, 255, 0.12);
+    
+    /* Text Colors */
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --text-accent: var(--ai-primary-light);
+    
+    /* Borders & Shadows */
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --border-medium: rgba(255, 255, 255, 0.2);
+    --glow-ai: 0 0 20px rgba(99, 102, 241, 0.3);
+    --glow-success: 0 0 20px rgba(16, 185, 129, 0.3);
+    --glow-danger: 0 0 20px rgba(239, 68, 68, 0.3);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Light Theme Variables */
+:root[data-theme="light"] {
+    /* AI Theme Colors */
+    --ai-primary: #4f46e5;
+    --ai-primary-dark: #3730a3;
+    --ai-primary-light: #6366f1;
+    --ai-secondary: #0ea5e9;
+    --ai-accent: #06b6d4;
+    
+    /* Status Colors */
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --danger-color: #dc2626;
+    --info-color: #2563eb;
+    
+    /* Surfaces & Backgrounds */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #e2e8f0;
+    --surface-glass: rgba(0, 0, 0, 0.02);
+    --surface-card: rgba(0, 0, 0, 0.03);
+    --surface-hover: rgba(0, 0, 0, 0.05);
+    
+    /* Text Colors */
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-accent: var(--ai-primary);
+    
+    /* Borders & Shadows */
+    --border-subtle: rgba(0, 0, 0, 0.1);
+    --border-medium: rgba(0, 0, 0, 0.2);
+    --glow-ai: 0 0 20px rgba(79, 70, 229, 0.15);
+    --glow-success: 0 0 20px rgba(5, 150, 105, 0.15);
+    --glow-danger: 0 0 20px rgba(220, 38, 38, 0.15);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Auto theme detection */
+@media (prefers-color-scheme: light) {
+    :root[data-theme="auto"] {
+        /* Light mode variables when system prefers light */
+        --ai-primary: #4f46e5;
+        --ai-primary-dark: #3730a3;
+        --ai-primary-light: #6366f1;
+        --ai-secondary: #0ea5e9;
+        --ai-accent: #06b6d4;
+        --success-color: #059669;
+        --warning-color: #d97706;
+        --danger-color: #dc2626;
+        --info-color: #2563eb;
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
+        --bg-tertiary: #e2e8f0;
+        --surface-glass: rgba(0, 0, 0, 0.02);
+        --surface-card: rgba(0, 0, 0, 0.03);
+        --surface-hover: rgba(0, 0, 0, 0.05);
+        --text-primary: #0f172a;
+        --text-secondary: #334155;
+        --text-muted: #64748b;
+        --text-accent: var(--ai-primary);
+        --border-subtle: rgba(0, 0, 0, 0.1);
+        --border-medium: rgba(0, 0, 0, 0.2);
+        --glow-ai: 0 0 20px rgba(79, 70, 229, 0.15);
+        --glow-success: 0 0 20px rgba(5, 150, 105, 0.15);
+        --glow-danger: 0 0 20px rgba(220, 38, 38, 0.15);
+        --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root[data-theme="auto"] {
+        /* Dark mode variables when system prefers dark */
+        --ai-primary: #6366f1;
+        --ai-primary-dark: #4f46e5;
+        --ai-primary-light: #a5b4fc;
+        --ai-secondary: #0ea5e9;
+        --ai-accent: #06b6d4;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --danger-color: #ef4444;
+        --info-color: #3b82f6;
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --surface-glass: rgba(255, 255, 255, 0.05);
+        --surface-card: rgba(255, 255, 255, 0.08);
+        --surface-hover: rgba(255, 255, 255, 0.12);
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #64748b;
+        --text-accent: var(--ai-primary-light);
+        --border-subtle: rgba(255, 255, 255, 0.1);
+        --border-medium: rgba(255, 255, 255, 0.2);
+        --glow-ai: 0 0 20px rgba(99, 102, 241, 0.3);
+        --glow-success: 0 0 20px rgba(16, 185, 129, 0.3);
+        --glow-danger: 0 0 20px rgba(239, 68, 68, 0.3);
+        --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Smooth transitions for theme changes */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Special styling for theme selector */
+.theme-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.theme-indicator::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ai-primary);
+}
+
+[data-theme="light"] .theme-indicator::before {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+}
+
+[data-theme="dark"] .theme-indicator::before {
+    background: linear-gradient(45deg, #6366f1, #4f46e5);
+}
+
+[data-theme="auto"] .theme-indicator::before {
+    background: linear-gradient(45deg, #6366f1, #fbbf24);
+}

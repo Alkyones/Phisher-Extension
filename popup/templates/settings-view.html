@@ -1,0 +1,94 @@
+<header class="settings-header">
+    <div class="header-content">
+        <button id="backBtn" class="back-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+            </svg>
+        </button>
+        <h1>Settings</h1>
+    </div>
+</header>
+
+<main class="settings-content">
+    <!-- Core Security Settings -->
+    <section class="settings-section">
+        <div class="section-header">
+            <span class="section-icon">🔧</span>
+            <h2>Core Security</h2>
+        </div>
+        
+        <div class="setting-item">
+            <div class="setting-info">
+                <label class="setting-label">Detection Sensitivity</label>
+                <p class="setting-desc">AI confidence threshold for threat detection</p>
+            </div>
+            <select id="detectionSensitivity" class="setting-select">
+                <option value="conservative">Conservative</option>
+                <option value="balanced" selected>Balanced</option>
+                <option value="aggressive">Aggressive</option>
+            </select>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <label class="setting-label">Real-time Protection</label>
+                <p class="setting-desc">Automatically scan websites as you browse</p>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="realTimeProtection" checked>
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <label class="setting-label">Theme <span class="theme-indicator">Dark</span></label>
+                <p class="setting-desc">Choose your preferred interface theme</p>
+            </div>
+            <select id="themeSelector" class="setting-select">
+                <option value="dark">Dark Mode</option>
+                <option value="light">Light Mode</option>
+                <option value="auto">Auto (System)</option>
+            </select>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <label class="setting-label">Auto-block Threats</label>
+                <p class="setting-desc">Block phishing sites automatically vs. warning only</p>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="autoBlockThreats">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+    </section>
+
+    <!-- User Control -->
+    <section class="settings-section">
+        <div class="section-header">
+            <span class="section-icon">🎯</span>
+            <h2>User Control</h2>
+        </div>
+
+        <div class="setting-item clickable" data-action="whitelist">
+            <div class="setting-info">
+                <label class="setting-label">Whitelist Management</label>
+                <p class="setting-desc">Manage trusted sites that bypass scanning</p>
+            </div>
+            <svg class="setting-arrow" viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+            </svg>
+        </div>
+
+        <div class="setting-item clickable" data-action="blacklist">
+            <div class="setting-info">
+                <label class="setting-label">Blacklist Management</label>
+                <p class="setting-desc">Manage blocked domains and threats</p>
+            </div>
+            <svg class="setting-arrow" viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+            </svg>
+        </div>
+    </section>
+</main>

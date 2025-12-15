@@ -1,0 +1,67 @@
+<header class="settings-header history-header">
+    <div class="header-content">
+        <button id="backBtn" class="back-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+            </svg>
+        </button>
+        <div class="page-title">
+            <h1>📊 Scan History</h1>
+            <p>View and export your URL analysis history</p>
+        </div>
+    </div>
+</header>
+
+<main class="settings-content history-content">
+    <!-- Controls -->
+    <section class="controls-section">
+        <div class="filter-controls">
+            <div class="filter-group">
+                <label for="filterType">Filter:</label>
+                <select id="filterType">
+                    <option value="all">All Results</option>
+                    <option value="threats">Threats Only</option>
+                    <option value="safe">Safe URLs Only</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="limitResults">Show:</label>
+                <select id="limitResults">
+                    <option value="25">25 results</option>
+                    <option value="50">50 results</option>
+                    <option value="100">100 results</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="action-controls">
+            <button id="exportCsvBtn" class="export-btn">
+                📄 Export CSV
+            </button>
+            <button id="exportJsonBtn" class="export-btn">
+                📋 Export JSON
+            </button>
+            <button id="clearHistoryBtn" class="clear-btn">
+                🗑️ Clear All
+            </button>
+        </div>
+    </section>
+
+    <!-- History List -->
+    <section class="history-section">
+        <div class="loading-indicator" id="loadingHistory" style="display: none;">
+            <div class="spinner"></div>
+            <span>Loading history...</span>
+        </div>
+
+        <div class="history-list" id="historyList">
+            <!-- History items will be populated here -->
+        </div>
+
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-icon">📊</div>
+            <h3>No scan history found</h3>
+            <p>Start analyzing URLs to see your scan history here</p>
+        </div>
+    </section>
+</main>

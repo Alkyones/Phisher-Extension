@@ -1,0 +1,28 @@
+<header class="settings-header">
+    <div class="header-content">
+        <button id="backToSettingsBtn" class="back-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+            </svg>
+        </button>
+        <h1>Whitelist Management</h1>
+    </div>
+</header>
+
+<main class="settings-content">
+    <section class="settings-section">
+        <div class="section-header">
+            <span class="section-icon">✅</span>
+            <h2>Trusted Domains</h2>
+        </div>
+        
+        <div class="whitelist-add">
+            <input type="text" id="whitelistInput" placeholder="Enter domain (e.g., example.com)" class="whitelist-input">
+            <button id="addWhitelistBtn" class="add-btn">Add</button>
+        </div>
+        
+        <div id="whitelistContainer" class="whitelist-container">
+            <div class="loading-whitelist">Loading trusted domains...</div>
+        </div>
+    </section>
+</main>
