@@ -1,9 +1,7 @@
 class PhishingDetector {
     constructor() {
-        // Use production API URL when extension is packaged, localhost for development
-        this.apiUrl = chrome.runtime.getManifest().key ? 
-            'https://phisher-backend-97nn.onrender.com' : // Production URL
-            'http://localhost:8080'; // Development URL
+        // Use production API URL
+        this.apiUrl = 'https://phisher-backend-97nn.onrender.com';
         this.currentUrl = '';
         this.analysisCache = new Map();
         this.stats = {
