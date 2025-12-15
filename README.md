@@ -6,6 +6,8 @@
 
 An advanced AI-powered Chrome extension that provides real-time phishing detection and URL threat analysis using neural networks to protect users from malicious websites.
 
+Backend: [Backend Repository](https://github.com/Alkyones/Phisher-Backend)
+
 ## 📚 Table of Contents
 
 - [Features](#-features)
