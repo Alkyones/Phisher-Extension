@@ -444,10 +444,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact & Support
 
-- **GitHub**: [Project Repository](https://github.com/your-repo/phisher-extension)
-- **Issues**: [Bug Reports & Feature Requests](https://github.com/your-repo/phisher-extension/issues)
-- **Wiki**: [Detailed Documentation](https://github.com/your-repo/phisher-extension/wiki)
-- **Email**: support@your-domain.com
+- **GitHub**: [Project Repository](https://github.com/Alkyones/phisher-extension)
+- **Issues**: [Bug Reports & Feature Requests](https://github.com/Alkyones/phisher-extension/issues)
+- **Wiki**: [Detailed Documentation](https://github.com/Alkyones/phisher-extension/wiki)
+- **Email**: atakan.yildirim.fs@gmail.com
 
 ---
 
