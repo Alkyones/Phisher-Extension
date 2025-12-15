@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Phisher - AI URL Protection",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Advanced AI-powered phishing detection and URL threat analysis powered by neural networks",
   "permissions": [
     "activeTab",
@@ -11,8 +11,7 @@
     "tabs"
   ],
   "host_permissions": [
-    "http://localhost:8080/*",
-    "https://your-backend-api.com/*",
+    "https://phisher-backend-97nn.onrender.com/*",
     "<all_urls>"
   ],
   "action": {
@@ -44,10 +43,9 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["icons/*", "popup/templates/*", "popup/history.css"],
+      "resources": ["icons/icon16.png", "icons/icon32.png", "icons/icon48.png", "icons/icon128.png"],
       "matches": ["<all_urls>"]
     }
   ],
-  "author": "Phishing Detector Team",
-  "homepage_url": "https://github.com/your-username/phis-catcher"
+  "author": "Phishing Detector Team"
 }
